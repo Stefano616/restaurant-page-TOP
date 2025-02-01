@@ -96,8 +96,8 @@ button:hover {
   margin: 1rem;
   border-radius: 1rem;
 }
-.img-container {
-  background-color: rgb(0, 179, 255);
+.hero__img-container > img {
+  border-radius: 25px;
 }
 .hero__text-container {
   padding-block: 2rem;
@@ -128,7 +128,7 @@ button:hover {
   flex-wrap: wrap;
 }
 
-.info__para {
+.info__container {
   max-width: 500px;
   margin: 2rem 1rem;
   background-color: rgb(0, 0, 0, 0.5);
