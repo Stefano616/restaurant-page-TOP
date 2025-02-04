@@ -1,4 +1,7 @@
 import myHeroImg from "../assets/pastaAlPestoHome.jpg";
+import { clearContent } from "./clearContent";
+import { menuLoader } from "./menuLoader";
+import { setActiveState } from "./setActiveState";
 
 export function heroBuilder(contentDiv) {
   const heroDiv = document.createElement("div");
@@ -28,6 +31,9 @@ export function heroBuilder(contentDiv) {
   heroBtn.classList.add("hero__text-container__btn", "menu-btn");
   heroBtn.textContent = "menu";
   heroBtn.type = "button";
+  heroBtn.addEventListener("click", clearContent);
+  heroBtn.addEventListener("click", menuLoader);
+  heroBtn.addEventListener("click", setActiveState);
 
   heroTextDiv.append(heroTitle, heroPara, heroBtn);
 

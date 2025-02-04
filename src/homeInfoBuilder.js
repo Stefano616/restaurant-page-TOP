@@ -1,3 +1,7 @@
+import { clearContent } from "./clearContent";
+import { aboutLoader } from "./aboutLoader";
+import { setActiveState } from "./setActiveState";
+
 export function infoBuilder(contentDiv) {
   const infoDiv = document.createElement("div");
   infoDiv.classList.add("info");
@@ -11,6 +15,9 @@ export function infoBuilder(contentDiv) {
   infoBtn.classList.add("info__btn", "about-btn");
   infoBtn.type = "button";
   infoBtn.textContent = "Read our story";
+  infoBtn.addEventListener("click", clearContent);
+  infoBtn.addEventListener("click", aboutLoader);
+  infoBtn.addEventListener("click", setActiveState);
 
   const infoData = [
     `The origins of Pesto can be related to the ancient romans, although in the Roman Age the paste was based on smashed garlic, salt, cheese, herbs, olive oil and vinegar.`,
